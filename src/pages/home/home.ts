@@ -128,8 +128,11 @@ export class HomePage {
         Janus.webRTCAdapter.browserDetails.browser === "firefox" ||
         Janus.webRTCAdapter.browserDetails.browser === "safari")) {
         bitrateTimer = setInterval(() => {
+          var remotevideo = document.querySelector('#remotevideo') as HTMLVideoElement;
+          var width = remotevideo.width;
+          var height = remotevideo.height;
           var bitrate = streaming.getBitrate();
-          console.log("video bitrate: "+bitrate);
+          console.log("video bitrate: "+bitrate+", video resolution: "+width+"x"+height);
         }, 1000);
     }
   }
