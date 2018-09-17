@@ -35,6 +35,20 @@ Redistribute latency...
 ### JANUS
 
 ```
+/usr/local/janus/etc/janus -> janus.plugin.streaming.cfg
+    [h264-sample]
+    type = rtp
+    id = 10
+    description = H.264 live stream coming from gstreamer
+    audio = no
+    video = yes
+    videoport = 5000
+    videopt = 126
+    videortpmap = H264/90000
+    videofmtp = profile-level-id=42e01f;packetization-mode=1
+
+START JANUS: /usr/local/janus/bin/janus
+
 Janus commit: not-a-git-repo
 Compiled on:  Fri Sep 14 22:44:58 IST 2018
 
@@ -110,19 +124,6 @@ Creating new handle in session 2854014903987541: 4893563947662976; 0x7f8ee670f9f
 [janus.plugin.streaming-0x7f8ee6606490] No WebRTC media anymore
 [4893563947662976] WebRTC resources freed; 0x7f8ee66062e0 0x7f8ee670f9f0
 
-/usr/local/janus/etc/janus -> janus.plugin.streaming.cfg
-    [h264-sample]
-    type = rtp
-    id = 10
-    description = H.264 live stream coming from gstreamer
-    audio = no
-    video = yes
-    videoport = 5000
-    videopt = 126
-    videortpmap = H264/90000
-    videofmtp = profile-level-id=42e01f;packetization-mode=1
-
-START JANUS: /usr/local/janus/bin/janus
 ```
 
 ### IONIC LOGS
