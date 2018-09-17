@@ -265,4 +265,6 @@ Starting app-scripts server: --address 0.0.0.0 --port 8100 --livereload-port 357
 [16:44:18]  console.log: video bitrate: 609 kbits/sec
 [16:44:19]  console.log: video bitrate: 526 kbits/sec
 [16:44:20]  console.log: video bitrate: 491 kbits/sec
+
+defaults write com.google.Keystone.Agent checkInterval 0
 ```
